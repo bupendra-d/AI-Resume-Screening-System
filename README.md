@@ -8,7 +8,6 @@ The application is built using **Flask** and deployed on **Render**, with a **Hu
 
 
 
-
 # Live Demo
 
 Experience the deployed application here:
@@ -17,12 +16,6 @@ Experience the deployed application here:
 
 Note: This application is deployed on Render's free tier. If the app has been inactive for some time, the initial request may take 30–60 seconds to load while the server wakes up.
 
-
-### Hugging Face Spaces
-
-Interactive demo:
-
-> **Coming Soon**
 
 
 #  Features
