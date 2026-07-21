@@ -8,14 +8,14 @@ The application is built using **Flask** and deployed on **Render**, with a **Hu
 
 
 
-#  Live Demo
 
-###  Render
+# Live Demo
 
-**Try the application here:**
+Experience the deployed application here:
 
-> **Coming Soon**
+** Live Application:** : https://ai-resume-screening-system-wfen.onrender.com
 
+Note: This application is deployed on Render's free tier. If the app has been inactive for some time, the initial request may take 30–60 seconds to load while the server wakes up.
 
 
 ### Hugging Face Spaces
@@ -282,7 +282,7 @@ Why Linear SVM?
 
 #  Project Structure
 
- .gitignore
+    .gitignore
     app.py
 │   predict.py
 │   Procfile
@@ -316,12 +316,20 @@ Why Linear SVM?
 │  
 │           
 ├───src
-    │   nltk_setup.py
     │   pdf_parser.py
     │   predictor.py
     │   preprocessing.py
     │   resume_analyzer.py
     │   __init__.py
+    |
+|
+|
+|
+|_____nltk_data
+           corpora
+           taggers
+           tokenizers   
+
 
 
 
@@ -358,4 +366,47 @@ http://127.0.0.1:5000
 ```
 
 Upload a resume PDF and start analyzing!
+
+
+
+
+#  Future Improvements
+
+The current system uses **TF-IDF + Linear SVM**, which provides strong performance while remaining lightweight and efficient. Future enhancements may include:
+
+-  Fine-tuning **BERT** or **RoBERTa** for improved contextual understanding
+-  Resume-to-Job Description (JD) matching
+-  ATS (Applicant Tracking System) compatibility scoring
+-  Resume ranking based on job requirements
+-  Multiple resume comparison and candidate ranking
+-  Skill gap analysis and personalized recommendations
+-  CI/CD pipeline for automated testing and deployment
+-  Cloud deployment using AWS, Azure, or Google Cloud
+
+---
+
+#  Author
+
+**Bupendra Devegade**
+
+BBA (Hons) – Business Analytics
+
+Machine Learning | Data Science | AI | NLP
+
+⭐ If you found this project useful, consider giving it a star!
+
+
+
+#  Acknowledgements
+
+- **Scikit-learn** for machine learning algorithms and TF-IDF vectorization
+- **NLTK** for natural language preprocessing
+- **PyMuPDF** for PDF text extraction
+- **Flask** for the web application framework
+- **Render** for application deployment
+- **Hugging Face Spaces** for interactive AI model hosting
+- The creators of the **Resume Classification Dataset** used in this project
+
+
+
 
