@@ -3,7 +3,15 @@ from flask import Flask, render_template, request
 import os
 
 from src.predictor import predict_resume_category
-from src import nltk_setup
+
+
+import sys
+
+print("Python executable:")
+print(sys.executable)
+
+import nltk
+print("NLTK version:", nltk.__version__)
 
 app = Flask(__name__)
 

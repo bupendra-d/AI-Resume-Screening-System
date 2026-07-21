@@ -1,26 +1,28 @@
 # Text preprocessing Libraries for Resume Screening AI
+import os
 import re
 import unicodedata
 
 import nltk
 
-nltk.data.path.append(r"C:\Users\bhupi\OneDrive\Desktop\nltk_data")
+# Add local nltk_data folder if it exists
+LOCAL_NLTK_DATA = os.path.join(
+    os.path.dirname(os.path.dirname(__file__)),
+    "nltk_data"
+)
+
+if os.path.exists(LOCAL_NLTK_DATA):
+    nltk.data.path.insert(0, LOCAL_NLTK_DATA)
 
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
 
 
-# Download NLTK Resources
-# nltk.download("stopwords")
-# nltk.download("wordnet")
-# nltk.download("omw-1.4")
-
 
 # Initialize Objects
 STOP_WORDS = set(stopwords.words("english"))
 lemmatizer = WordNetLemmatizer()
-
 
 
 # Step 1: Lowercase-Text Function:
