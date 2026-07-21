@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Resume Screening AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+
+        <!--Header-->
+
+        <header>
+
+            <h1>Resume Screening AI</h1>
+
+            <p>
+                Upload a PDF resume to predict its job category
+                and view resume insights.
+            </p>
+
+        </header>
+
+
+        <!--Upload Form -->
+
+        <form
+            action="{{ url_for('predict') }}"
+            method="POST"
+            enctype="multipart/form-data"
+        >
+
+            <div class="upload-box">
+
+                <label for="resume">
+                    Select Resume (PDF)
+                </label>
+
+                <input
+                    type="file"
+                    id="resume"
+                    name="resume"
+                    accept=".pdf"
+                    required
+                >
+
+            </div>
+
+            <button type="submit">
+
+                Analyze Resume
+
+            </button>
+
+        </form>
+
+
+        <!--Prediction Result -->
+
+        {% if prediction %}
+
+        <div class="card">
+
+            <h2>Predicted Category</h2>
+
+            <p class="prediction">
+
+                ✔ {{ prediction }}
+
+            </p>
+
+        </div>
+
+        {% endif %}
+
+
+        <!--Top Matching Categories-->
+
+        {% if top_matches %}
+
+        <div class="card">
+
+            <h2>Top Matching Categories</h2>
+
+            <ol>
+
+                {% for category in top_matches %}
+
+                <li>
+
+                    {{ category }}
+
+                </li>
+
+                {% endfor %}
+
+            </ol>
+
+        </div>
+
+        {% endif %}
+
+
+        <!--Resume Analysis-->
+
+        {% if analysis %}
+
+        <div class="card">
+
+            <h2>Resume Insights</h2>
+
+            <table>
+
+                <tr>
+                    <th>Word Count</th>
+                    <td>{{ analysis.word_count }}</td>
+                </tr>
+
+                <tr>
+                    <th>Education</th>
+                    <td>{{ analysis.education }}</td>
+                </tr>
+
+                <tr>
+                    <th>Experience</th>
+                    <td>{{ analysis.experience }}</td>
+                </tr>
+
+                <tr>
+                    <th>Email</th>
+                    <td>{{ analysis.email }}</td>
+                </tr>
+
+                <tr>
+                    <th>Phone</th>
+                    <td>{{ analysis.phone }}</td>
+                </tr>
+
+                <tr>
+                    <th>LinkedIn</th>
+                    <td>{{ analysis.linkedin }}</td>
+                </tr>
+
+                <tr>
+                    <th>GitHub</th>
+                    <td>{{ analysis.github }}</td>
+                </tr>
+
+                <tr>
+                    <th>Skills Found</th>
+
+                    <td>
+
+                        {% if analysis.skills %}
+
+                            {{ analysis.skills | join(", ") }}
+
+                        {% else %}
+
+                            No skills detected.
+
+                        {% endif %}
+
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </div>
+
+        {% endif %}
+
+
+        <!--Footer-->
+
+        <footer>
+
+            <p>
+
+                Resume Screening AI |
+                Built with Flask, NLP, TF-IDF & Linear SVM
+
+            </p>
+
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

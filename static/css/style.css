@@ -1,0 +1,223 @@
+/* General Page Styling */
+body{
+
+    margin:0;
+    padding:0;
+
+    background:#f4f6f9;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    color:#333;
+
+}
+
+
+/* Main Container */
+.container{
+
+    width:90%;
+
+    max-width:1000px;
+
+    margin:40px auto;
+
+}
+
+
+/* Header */
+header{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+
+header h1{
+
+    margin-bottom:10px;
+
+    color:#1f4e79;
+
+}
+
+
+header p{
+
+    color:#555;
+
+    font-size:17px;
+
+}
+
+
+/* Upload Form */
+form{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:10px;
+
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+
+    margin-bottom:30px;
+
+}
+
+
+.upload-box{
+
+    margin-bottom:20px;
+
+}
+
+
+.upload-box label{
+
+    display:block;
+
+    font-weight:bold;
+
+    margin-bottom:10px;
+
+}
+
+
+.upload-box input{
+
+    width:100%;
+
+    padding:10px;
+
+}
+
+
+/* Button */
+button{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#1f4e79;
+
+    color:white;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+}
+
+
+button:hover{
+
+    background:#163a5c;
+
+}
+
+
+/* Cards */
+.card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:10px;
+
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+
+    margin-bottom:25px;
+
+}
+
+
+.card h2{
+
+    margin-top:0;
+
+    color:#1f4e79;
+
+}
+
+
+/* Prediction Text */
+.prediction{
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    color:green;
+
+}
+
+
+/* Top Matches */
+ol{
+
+    padding-left:20px;
+
+}
+
+
+ol li{
+
+    margin-bottom:8px;
+
+}
+
+
+/* Resume Insights Table */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+
+th,
+td{
+
+    padding:12px;
+
+    border:1px solid #ddd;
+
+    text-align:left;
+
+}
+
+
+th{
+
+    width:35%;
+
+    background:#f2f2f2;
+
+}
+
+
+/* Footer */
+footer{
+
+    text-align:center;
+
+    margin-top:35px;
+
+    color:#666;
+
+    font-size:14px;
+
+}
