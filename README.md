@@ -40,28 +40,14 @@ Note: This application is deployed on Render's free tier. If the app has been in
 
 # Project Workflow
 
-Resume PDF
-      │
-      ▼
-Extract Text (PyMuPDF)
-      │
-      ▼
-Text Cleaning & NLP Preprocessing
-      │
-      ▼
-TF-IDF Vectorization
-      │
-      ▼
-Linear SVM Classifier
-      │
-      ▼
-Predicted Resume Category
-      │
-      ▼
-Resume Analysis
-      │
-      ▼
-Display Results in Flask App
+1. Resume PDF
+2. Extract Text (PyMuPDF) 
+3. Text Cleaning & NLP Preprocessing 
+4. TF-IDF Vectorization 
+5. Linear SVM Classifier 
+6. Predicted Resume Category 
+7. Resume Analysis 
+8. Display Results in Flask App
 
 
 
@@ -271,57 +257,6 @@ Why Linear SVM?
 - Faster inference
 - Well suited for high-dimensional sparse TF-IDF features
 
-
-
-#  Project Structure
-
-    .gitignore
-    app.py
-│   predict.py
-│   Procfile
-│   README.md
-│   requirements.txt
-│   runtime.txt
-│       
-├───artifacts
-│       resume_classifier.pkl
-│       
-├───datasets
-│       Resume.csv
-│       resume_cleaned.csv
-│       resume_modified.csv
-│       
-
-├───notebooks
-│   │   1-Dataset Understanding and NLP-EDA.ipynb
-│   │   2-Text Preprocessing Testing.ipynb
-│   │   3-Cleaned Dataset Analysis.ipynb
-│   │   4-TF-IDF Vectorization and Model Building.ipynb
-│   │   5-PDF Parsing Tests.ipynb
-│   │   6-Resume Analyzer Test.ipynb
-│     
-│           
-├───sample_resumes
-│   │   data_scientist.pdf
-│   │   software_engineer.pdf
-│   │   teacher.pdf
-│      
-│  
-│           
-├───src
-    │   pdf_parser.py
-    │   predictor.py
-    │   preprocessing.py
-    │   resume_analyzer.py
-    │   __init__.py
-    |
-|
-|
-|
-|_____nltk_data
-           corpora
-           taggers
-           tokenizers   
 
 
 
