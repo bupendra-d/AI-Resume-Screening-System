@@ -4,13 +4,12 @@ An end-to-end **Natural Language Processing (NLP)** project that automatically c
 
 The system extracts text from PDF resumes, performs advanced NLP preprocessing, predicts the most suitable job category using a trained **Linear Support Vector Machine (Linear SVM)** model, and provides resume insights such as detected skills, education, experience, email, phone number, GitHub, and LinkedIn profile.
 
-The application is built using **Flask** and deployed on **Render**, with a **Hugging Face Spaces** version planned for interactive demonstrations.
-
+The application is built using **Flask** and deployed on **Render**.
 
 
 # Live Demo
 
-Experience the deployed application here:
+Check out the live application here:
 
 ** Live Application:** : https://ai-resume-screening-system-wfen.onrender.com
 
@@ -72,9 +71,6 @@ Note: This application is deployed on Render's free tier. If the app has been in
 ### Deployment
 - Flask
 - Render
-
-### Future Deployment
-- Hugging Face Spaces
 
 
 
@@ -309,7 +305,8 @@ The current system uses **TF-IDF + Linear SVM**, which provides strong performan
 -  Multiple resume comparison and candidate ranking
 -  Skill gap analysis and personalized recommendations
 -  CI/CD pipeline for automated testing and deployment
--  Cloud deployment using AWS, Azure, or Google Cloud
+-  Cloud deployment using AWS, Azure, or Google Cloud 
+-  Deploy the Project on Hugging Face
 
 ---
 
@@ -332,7 +329,6 @@ Machine Learning | Data Science | AI | NLP
 - **PyMuPDF** for PDF text extraction
 - **Flask** for the web application framework
 - **Render** for application deployment
-- **Hugging Face Spaces** for interactive AI model hosting
 - The creators of the **Resume Classification Dataset** used in this project
 
 
