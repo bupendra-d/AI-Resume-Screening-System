@@ -314,12 +314,7 @@ The current system uses **TF-IDF + Linear SVM**, which provides strong performan
 
 **Bupendra Devegade**
 
-BBA (Hons) – Business Analytics
-
 Machine Learning | Data Science | AI | NLP
-
-⭐ If you found this project useful, consider giving it a star!
-
 
 
 #  Acknowledgements
